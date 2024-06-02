@@ -1,0 +1,44 @@
+{
+  "name": "tralsedb-express-mysql",
+  "version": "1.0.0",
+  "description": "This package provides a modularized and remodified modules on mysql, providing a robust development.",
+  "main": "index.mjs",
+  "types": "types/index",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "errors/**/*",
+    "lib/**/*",
+    "types/**/*",
+    "util/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [],
+  "author": "Kent Gio",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">= 8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kntgio-z/tralsedb-express-mysql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kntgio-z/tralsedb-express-mysql/issues"
+  },
+  "homepage": "https://github.com/kntgio-z/tralsedb-express-mysql#README",
+  "dependencies": {
+    "mysql2": "^3.10.0"
+  }
+}
