@@ -16,11 +16,20 @@ declare module "tralsedb-express-mysql" {
    * @param {import('mysql2/promise').Pool} pool - The database connection pool.
    * @param {string} dbName - The name of the database.
    * @param {boolean} [enableTransactions=false] - Whether to enable transaction support.
-   * @returns {Function} - The middleware function.
+   * @returns {(req: Request, res: Response, next: NextFunction) => Promise<void>} - The middleware function.
    */
   export const TralseMySQL: (
+    /**
+     * The database connection pool.
+     */
     pool: MySequelizePool,
+    /**
+     * The name of the database.
+     */
     dbName: string,
+    /**
+     * Whether to enable transaction support.
+     */
     enableTransactions?: boolean
   ) => (req: Request, res: Response, next: NextFunction) => Promise<void>;
 }
