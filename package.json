@@ -1,6 +1,6 @@
 {
   "name": "tralsedb-express-mysql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package provides a modularized and remodified modules on mysql, providing a robust development.",
   "main": "index.mjs",
   "types": "types/index",
