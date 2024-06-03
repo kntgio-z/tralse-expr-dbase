@@ -20,7 +20,7 @@ export interface TransactionMethods {
   retrieve: (
     req: Request,
     dbName: string
-  ) => { connection: Connection; error?: string }; // Changed `connection: string` to `connection: Connection`
+  ) => { connection: string; error?: string };
 }
 
 export interface DatabaseInstance {
@@ -31,6 +31,14 @@ export interface DatabaseInstance {
   terminate: () => Promise<void>;
 }
 
+/**
+ * Middleware to attach TralseMySQL to requests.
+ *
+ * @param {import('mysql2/promise').Pool} pool - The database connection pool.
+ * @param {string} dbName - The name of the database.
+ * @param {boolean} [enableTransactions=false] - Whether to enable transaction support.
+ * @returns {Function} - The middleware function.
+ */
 export const TralseMySQL: (
   pool: MySequelizePool,
   dbName: string,
