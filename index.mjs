@@ -10,13 +10,12 @@ import { DatabaseError } from "./errors/error.mjs";
 import { initializeDbTransaction } from "./lib/transactions.mjs";
 
 /**
- * @typedef {import("./types/index").Connection} Connection
- 
- * @typedef {import("./types/index").QueryResult} QueryResult
- * @typedef {import("./types/index").DatabaseObject} DatabaseObject
- * @typedef {import("./types/index").TransactionMethods} TransactionMethods
- * @typedef {import("./types/index").DatabaseInstance} DatabaseInstance
+ * @typedef {import("./types/tralse").Connection} Connection
+ * @typedef {import("./types/tralse").DatabaseObject} DatabaseObject
+ * @typedef {import("./types/tralse").TransactionMethods} TransactionMethods
+ * @typedef {import("./types/tralse").DatabaseInstance} DatabaseInstance
  */
+
 
 /**
  * Initializes the database and provides query and transaction methods.
